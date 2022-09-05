@@ -1,0 +1,12 @@
+      <div class="card "style="width:19rem;height:560px">
+        <img class="card-img-top " [src]="productsCard.image"  alt="Card image cap"  style="width:250px; margin:auto; height:300px">
+        <div class="card-body">
+          <h5 class="card-title" [style.color]="(productsCard?.rating.count == 0)?'red':'green'" (click)="goToRouting(productsCard.id)">{{productsCard.title}}</h5>
+          <p class="card-text">{{productsCard.category}}</p>
+          <p class="card-text">{{productsCard.price | currency: "EGP" }}</p>
+          <p class="card-text">{{ productsCard?.rating.count | amount}}</p>
+        </div>
+        <div class="card-footer text-center">
+            <a class="btn btn-primary btn-lg" (click)="goToRouting(productsCard.id)" role="button"> Add to cart</a>
+        </div>
+      </div>

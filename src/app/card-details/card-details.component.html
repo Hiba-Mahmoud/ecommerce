@@ -1,0 +1,27 @@
+<div class="container ">
+  <div class="card mb-3" style="max-width: 100%;margin-top: 10rem;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img
+          [src]="productsDetails?.image"
+          alt="Trendy Pants and Shoes"
+          class="img-fluid rounded-start" style="height:500px;"
+        />
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h3 class="card-title" [style.color]="(productsDetails?.rating.count == 0)?'red':'green'">{{productsDetails?.title}}</h3>
+          <p class="card-text">
+            {{productsDetails?.description}}
+          </p>
+          <h5 class="card-text">
+            {{ productsDetails?.category}}
+          </h5>
+          <h5 class="card-text" >
+            {{ productsDetails?.rating.count | amount}}
+          </h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
